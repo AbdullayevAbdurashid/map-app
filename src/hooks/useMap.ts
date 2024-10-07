@@ -10,7 +10,7 @@ import { boundingExtent } from "ol/extent";
 export const useMap = (points: MapPoint[]) => {
   const [map, setMap] = useState<Map | null>(null);
   const mapRef = useRef<HTMLDivElement>(null);
-
+  //Todo change map  Tile to something better.
   useEffect(() => {
     if (!mapRef.current) {
       console.log("Map container not found");

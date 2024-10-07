@@ -5,7 +5,7 @@ import { MapPoint } from "types";
 import PointDetails from "components/PointDetails/PointDetails.tsx";
 import { LoadingScreen, ErrorScreen } from "components/Progress/Progress.tsx";
 import SidebarContent from "components/Sidebar/Content.tsx";
-const MapComponent = lazy(() => import("./components/Map/index.tsx"));
+const MapComponent = lazy(() => import("components/Map/index.tsx"));
 
 const App: React.FC = () => {
   const { points, loading, error, updatePoint } = usePoints();

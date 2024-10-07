@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import { useMap } from "../../hooks/useMap";
-import { MapPoint } from "../../types";
-import { createPointFeature, getPointStyle } from "../../utils/mapUtils";
+import { useMap } from "hooks/useMap";
+import { MapPoint } from "types";
+import { createPointFeature, getPointStyle } from "utils/mapUtils";
 import MapControls from "./MapControls";
 import VectorLayer from "ol/layer/Vector";
 import VectorSource from "ol/source/Vector";

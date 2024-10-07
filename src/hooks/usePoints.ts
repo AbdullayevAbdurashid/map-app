@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { MapPoint } from "types";
-import { getStoredPoints, storePoints } from "utils/storage";
-import { USE_SAMPLE_DATA } from "utils/constants";
+import { MapPoint } from "../types";
+import { getStoredPoints, storePoints } from "../utils/storage";
+import { USE_SAMPLE_DATA } from "../utils/constants";
 
 export const usePoints = () => {
   const [points, setPoints] = useState<MapPoint[]>([]);

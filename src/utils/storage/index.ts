@@ -1,5 +1,5 @@
-import { MapPoint } from "types";
-import { POINTS_STORAGE_KEY } from "utils/constants";
+import { MapPoint } from "../../types";
+import { POINTS_STORAGE_KEY } from "../../utils/constants";
 
 export const getStoredPoints = (): MapPoint[] | null => {
   try {
