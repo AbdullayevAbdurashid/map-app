@@ -1,8 +1,8 @@
 import React, { useState, lazy, Suspense } from "react";
-import Layout from "./components/Layout";
-import { usePoints } from "./hooks/usePoints";
-import { MapPoint } from "./types";
-import PointDetails from "./components/PointDetails";
+import Layout from "components/Layout";
+import { usePoints } from "hooks/usePoints";
+import { MapPoint } from "types";
+import PointDetails from "components/PointDetails/PointDetails.tsx";
 import { LoadingScreen, ErrorScreen } from "components/Progress/Progress.tsx";
 import SidebarContent from "components/Sidebar/Content.tsx";
 const MapComponent = lazy(() => import("./components/Map/index.tsx"));
