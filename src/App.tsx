@@ -1,5 +1,8 @@
+import { usePoints } from "hooks/usePoints";
+
 function App() {
-  return <></>;
+  const { points, loading, error, updatePoint } = usePoints();
+  return <>This is app js</>;
 }
 
 export default App;
