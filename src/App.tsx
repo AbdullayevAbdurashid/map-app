@@ -5,7 +5,6 @@ import { MapPoint } from "./types";
 import PointDetails from "./components/PointDetails";
 import { LoadingScreen, ErrorScreen } from "components/Progress/Progress.tsx";
 import SidebarContent from "components/Sidebar/Content.tsx";
-
 const MapComponent = lazy(() => import("./components/Map/index.tsx"));
 
 const App: React.FC = () => {
@@ -14,7 +13,6 @@ const App: React.FC = () => {
   const handlePointClick = (point: MapPoint) => {
     setSelectedPoint(point);
   };
-
   const clearSelectedPoint = () => {
     setSelectedPoint(null);
   };
@@ -26,7 +24,6 @@ const App: React.FC = () => {
 
   if (loading) return <LoadingScreen />;
   if (error) return <ErrorScreen error={error} />;
-
   return (
     <Layout sidebarContent={<SidebarContent points={points} />}>
       <div

@@ -22,7 +22,6 @@ export const getPointStyle = (status: string): Style => {
     inactive: "#F44336",
     pending: "#FFC107",
   };
-  console.log(status);
   return new Style({
     image: new Circle({
       radius: 8,

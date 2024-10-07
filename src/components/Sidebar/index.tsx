@@ -1,8 +1,9 @@
 import React from "react";
 import { SidebarProps } from "../../types";
-
+import { useStatus } from "hooks/useNetworkStatus";
 //Todo add offline indicator
 const Sidebar: React.FC<SidebarProps> = ({ children, isOpen, onToggle }) => {
+  const { isOnline } = useStatus();
   return (
     <>
       <div
@@ -37,7 +38,12 @@ const Sidebar: React.FC<SidebarProps> = ({ children, isOpen, onToggle }) => {
             </button>
           </div>
           <div className="flex-1 px-4 py-6 overflow-y-auto">{children}</div>
-          <div className="flex-shrink-0 px-4 py-4 border-t border-gray-200"></div>
+          <div className="flex-shrink-0 px-4 py-4 border-t border-gray-200">
+            {" "}
+            <span className={isOnline ? "text-green-400" : "text-orange-500"}>
+              {isOnline ? "Online" : "Offline"}
+            </span>
+          </div>
         </div>
       </div>
       {isOpen && (

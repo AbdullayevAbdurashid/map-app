@@ -19,3 +19,6 @@ export interface MapProps {
   points: MapPoint[];
   onPointClick: (point: MapPoint) => void;
 }
+export interface UseOfflineReturn {
+  isOnline: boolean;
+}
