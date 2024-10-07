@@ -1,8 +1,6 @@
-import { usePoints } from "hooks/usePoints";
-
+import Layout from "components/Layout";
 function App() {
-  const { points, loading, error, updatePoint } = usePoints();
-  return <>This is app js</>;
+  return <Layout>This is app js</Layout>;
 }
 
 export default App;
