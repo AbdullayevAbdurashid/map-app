@@ -28,9 +28,9 @@ export const useMap = (points: MapPoint[]) => {
         center: [0, 0],
         zoom: 2,
       }),
+      controls: [], //disabling default controls because i already have custom controls
     });
 
-    console.log("Map created", initialMap);
     setMap(initialMap);
 
     return () => {

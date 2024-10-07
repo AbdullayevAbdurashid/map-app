@@ -38,9 +38,11 @@ const Map: React.FC<MapProps> = ({ points, onPointClick }) => {
     select.on("select", (event) => {
       if (event.selected.length > 0) {
         const feature = event.selected[0];
+
         const pointId = feature.getId() as number;
         const point = points.find((p) => p.id === pointId);
         if (point) {
+          event.preventDefault();
           onPointClick(point);
         }
       }
@@ -50,7 +52,7 @@ const Map: React.FC<MapProps> = ({ points, onPointClick }) => {
       map.removeLayer(vectorLayer);
       map.removeInteraction(select);
     };
-  }, [map, points, onPointClick]);
+  }, [map, points]);
 
   useEffect(() => {
     if (!map || !vectorLayerRef.current) return;
