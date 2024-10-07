@@ -13,4 +13,14 @@ export default defineConfig({
       types: "/src/types",
     },
   },
+  build: {
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          ol: ["ol"],
+        },
+      },
+    },
+  },
 });
