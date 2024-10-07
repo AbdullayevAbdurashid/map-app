@@ -58,10 +58,8 @@ const Map: React.FC<MapProps> = ({ points, onPointClick }) => {
     const vectorSource = vectorLayerRef.current.getSource();
     if (!vectorSource) return;
 
-    // Clear existing features
     vectorSource.clear();
 
-    // Add new features
     points.forEach((point) => {
       const feature = createPointFeature(point);
       feature.setStyle(getPointStyle(point.status));
