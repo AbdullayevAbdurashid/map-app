@@ -22,7 +22,7 @@ const PointDetails: React.FC<PointDetailsProps> = ({
   };
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md">
+    <div className="bg-white p-4 rounded-lg shadow-md  w-96 md:w-auto">
       <h2 className="text-xl font-bold mb-4">Point Details</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">

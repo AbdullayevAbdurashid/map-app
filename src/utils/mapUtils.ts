@@ -16,17 +16,17 @@ export const createPointFeature = (point: MapPoint): Feature => {
 
 export const getPointStyle = (status: string): Style => {
   const colors: { [key: string]: string } = {
-    active: "#4CAF50",
-    true: "#4CAF50",
-    false: "#F44336",
-    inactive: "#F44336",
-    pending: "#FFC107",
+    active: "#27AE60",
+    true: "#27AE60",
+    false: "#E74C3C",
+    inactive: "#E74C3C",
+    pending: "#F39C12",
   };
   return new Style({
     image: new Circle({
-      radius: 8,
+      radius: 11,
       fill: new Fill({ color: colors[status] || colors.active }),
-      stroke: new Stroke({ color: "#FFFFFF", width: 2 }),
+      stroke: new Stroke({ color: "#FFFFFF", width: 4 }),
     }),
   });
 };
