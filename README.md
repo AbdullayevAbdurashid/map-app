@@ -37,13 +37,13 @@ OpenStreetMap Points Editor is a web application built with Vite and React that 
 1. Clone the repository:
 
    ```
-   git clone https://github.com/yourusername/osm-points-editor.git
+   git clone https://github.com/AbdullayevAbdurashid/map-app.git
    ```
 
 2. Navigate to the project directory:
 
    ```
-   cd osm-points-editor
+   cd map-app
    ```
 
 3. Install dependencies:
