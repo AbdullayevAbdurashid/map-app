@@ -1,50 +1,71 @@
-# React + TypeScript + Vite
+# OpenStreetMap Points Editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="./images/img-2.jpeg" alt="OpenStreetMap Points Editor Screenshot" />
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
 
-## Expanding the ESLint configuration
+## Introduction
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+OpenStreetMap Points Editor is a web application built with Vite and React that allows users to interact with OpenStreetMap data. Users can view the map, add custom points of interest, edit existing points, and save their changes locally.
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Interactive OpenStreetMap integration
+- Add custom points of interest
+- Edit existing points
+- Save changes locally
+- Responsive design for desktop and mobile use
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+<img src="./images/img-1.jpeg" alt="Feature Showcase" />
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Getting Started
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Prerequisites
+
+- Node.js (v14.0.0 or later)
+- npm (v6.0.0 or later)
+
+### Installation
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/yourusername/osm-points-editor.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```
+   cd osm-points-editor
+   ```
+
+3. Install dependencies:
+
+   ```
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```
+   npm run dev
+   ```
+
+5. Open your browser and visit `http://localhost:5173`
+
+## Usage
+
+1. **Viewing the Map**: Upon loading the application, you'll see the OpenStreetMap interface.
+
+2. **Adding a Point**: Click on the "Add Point" button and then click on the map where you want to add the new point. Fill in the details in the popup form.
+
+3. **Editing a Point**: Click on an existing point on the map. Edit the details in the popup form.
+
+4. **Saving Changes**: Changes are automatically saved locally. To persist changes across sessions, implement a backend service.
